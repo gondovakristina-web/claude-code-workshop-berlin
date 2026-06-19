@@ -1,71 +1,36 @@
-# Claude Code Workshop — Berlin
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Welcome! In the next 2 hours you'll build and deploy your own website using Claude Code.
+## Getting Started
 
-## What you'll build
-
-Pick one of these starter templates:
-
-- **`templates/portfolio/`** — personal portfolio (about, projects, contact)
-- **`templates/landing/`** — small-business landing page (hero, services, contact)
-
-By the end of the workshop, your site will be live on the internet at a Vercel URL you can share.
-
-## Before the workshop
-
-You should have received a setup email with the account checklist (GitHub, Claude, Vercel). If you missed it, ping the organizer.
-
-## Getting started (during the workshop)
-
-1. **Fork this repo** to your own GitHub account (top-right "Fork" button).
-2. **Open in Codespaces**: on your fork, click the green "Code" button → "Codespaces" tab → "Create codespace on main". Wait ~60 seconds for the environment to boot.
-3. **Pick your template** in the Codespace terminal:
-   ```bash
-   cd templates/portfolio   # or: cd templates/landing
-   npm install
-   npm run dev
-   ```
-4. Click the "Open in Browser" popup that appears (port 3000) — that's your live preview.
-5. **Open Claude Code** in a second terminal:
-   ```bash
-   claude
-   ```
-6. Start chatting. Try: *"Change the headline to say 'Hi, I'm [your name]'"*
-
-## Deploying to Vercel
-
-Two ways, both quick:
-
-### Via the Vercel CLI (recommended — no setup)
-
-From inside your template directory:
+First, run the development server:
 
 ```bash
-cd templates/portfolio   # or templates/landing
-vercel login             # one-time
-vercel --prod
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-A URL appears. Your site is live.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Via the Vercel dashboard (GitHub integration)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-If you connect your GitHub fork to Vercel, you'll need one extra setting:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-1. [vercel.com/new](https://vercel.com/new) → import your fork
-2. **Root Directory** → click Edit → set to `templates/portfolio` (or `templates/landing`)
-3. Framework Preset auto-detects as Next.js once the Root Directory is set
-4. Click Deploy
+## Learn More
 
-> **Why the Root Directory step?** The website code lives inside `templates/portfolio/` (or `templates/landing/`), not at the repo root. Vercel needs to know where to look.
+To learn more about Next.js, take a look at the following resources:
 
-If you see a 404 or a "no Next.js version detected" error after deploy, the Root Directory probably wasn't set. Go to your project's **Settings → Build & Development Settings**, set it, save, then **Redeploy** from the Deployments tab.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Reference docs
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Whether during or after the workshop, these are the references to keep on hand:
+## Deploy on Vercel
 
-- [docs/01-terminal-basics.md](./docs/01-terminal-basics.md) — the dozen commands you actually need (`pwd`, `cd`, `mkdir`, etc.)
-- [docs/02-claude-commands.md](./docs/02-claude-commands.md) — every Claude Code slash command, keyboard shortcut, and launch mode
-- [docs/03-prompts.md](./docs/03-prompts.md) — a library of useful prompts, organized by what you're trying to do
-- [docs/04-next-steps.md](./docs/04-next-steps.md) — going further: custom slash commands, MCP servers, skills, extending your site
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
