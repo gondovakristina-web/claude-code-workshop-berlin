@@ -152,3 +152,11 @@ export const t = {
     },
   },
 } as const;
+
+export type NavTr = (typeof t)[Lang]["nav"];
+export type HeroTr = (typeof t)[Lang]["hero"];
+export type AboutTr = (typeof t)[Lang]["about"];
+export type ServicesTr = (typeof t)[Lang]["services"];
+export type DiscoveryTr = (typeof t)[Lang]["discovery"];
+export type ContactTr = (typeof t)[Lang]["contact"];
+export type FooterTr = (typeof t)[Lang]["footer"];

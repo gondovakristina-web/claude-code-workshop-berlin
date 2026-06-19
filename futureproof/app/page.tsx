@@ -3,7 +3,17 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { t, type Lang } from "@/lib/translations";
+import {
+  t,
+  type Lang,
+  type NavTr,
+  type HeroTr,
+  type AboutTr,
+  type ServicesTr,
+  type DiscoveryTr,
+  type ContactTr,
+  type FooterTr,
+} from "@/lib/translations";
 
 const CALENDLY_URL = "https://calendly.com/futureproof/discovery";
 
@@ -57,7 +67,7 @@ function Nav({
 }: {
   lang: Lang;
   setLang: (l: Lang) => void;
-  tr: typeof t.en.nav;
+  tr: NavTr;
 }) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-warm-border">
@@ -99,7 +109,7 @@ function Nav({
   );
 }
 
-function Hero({ tr }: { tr: typeof t.en.hero }) {
+function Hero({ tr }: { tr: HeroTr }) {
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-16 overflow-hidden">
       <div className="absolute inset-0">
@@ -169,7 +179,7 @@ function Hero({ tr }: { tr: typeof t.en.hero }) {
   );
 }
 
-function About({ tr }: { tr: typeof t.en.about }) {
+function About({ tr }: { tr: AboutTr }) {
   return (
     <section id="about" className="bg-cream py-32">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
@@ -228,7 +238,7 @@ function About({ tr }: { tr: typeof t.en.about }) {
   );
 }
 
-function Services({ tr }: { tr: typeof t.en.services }) {
+function Services({ tr }: { tr: ServicesTr }) {
   const images = [
     "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
     "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=800&q=80",
@@ -284,7 +294,7 @@ function Services({ tr }: { tr: typeof t.en.services }) {
   );
 }
 
-function Discovery({ tr }: { tr: typeof t.en.discovery }) {
+function Discovery({ tr }: { tr: DiscoveryTr }) {
   return (
     <section className="relative py-32 overflow-hidden">
       <div className="absolute inset-0">
@@ -319,7 +329,7 @@ function Discovery({ tr }: { tr: typeof t.en.discovery }) {
   );
 }
 
-function Contact({ tr }: { tr: typeof t.en.contact }) {
+function Contact({ tr }: { tr: ContactTr }) {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -432,7 +442,7 @@ function Footer({
   tr,
   lang,
 }: {
-  tr: typeof t.en.footer;
+  tr: FooterTr;
   lang: Lang;
 }) {
   return (
